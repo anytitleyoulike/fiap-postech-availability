@@ -7,7 +7,7 @@ class CreateAvailableDateDTO(BaseModel):
     doctor_id: str
     start_date: datetime
     end_date: datetime
-    is_available: bool
+    is_available: bool = True
 
     model_config = {
         "json_schema_extra": {

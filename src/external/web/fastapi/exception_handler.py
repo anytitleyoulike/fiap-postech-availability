@@ -21,3 +21,10 @@ def register_exceptions(app):
             status_code=400,
             content={"message": str(exception)}
         )
+
+    @app.exception_handler(Exception)
+    async def operational_handler(request: Request, exception: Exception):
+        return JSONResponse(
+            status_code=400,
+            content={"message": str(exception)}
+        )
