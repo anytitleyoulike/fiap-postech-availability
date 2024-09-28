@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Union
 
 from pydantic import BaseModel
 
@@ -24,6 +25,7 @@ class CreateAvailableDateDTO(BaseModel):
 
 
 class AvailableDateResponse(BaseModel):
+    id: Union[int, None] = None
     doctor_id: str
     start_date: datetime
     end_date: datetime

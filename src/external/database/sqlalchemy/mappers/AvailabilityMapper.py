@@ -12,3 +12,13 @@ class AvailabilityMapper:
             end_date=entity.end_date,
             is_available=entity.is_available
         )
+
+    @staticmethod
+    def model_to_entity(model: AvailabilityModel):
+        return AvailabilityEntity(
+            id=model.id,
+            doctor_id=model.doctor_id,
+            start_date=model.start_date,
+            end_date=model.end_date,
+            is_available=model.is_available
+        )
