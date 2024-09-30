@@ -1,6 +1,5 @@
-from src.core.domain.entities import availability_entity
 from src.core.domain.entities.availability_entity import AvailabilityEntity
-from src.external.database.models.availiability_model import AvailabilityModel
+from src.external.database.sqlalchemy.models.availiability_model import AvailabilityModel
 
 
 class AvailabilityMapper:

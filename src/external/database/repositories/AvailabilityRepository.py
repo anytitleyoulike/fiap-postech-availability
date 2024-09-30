@@ -2,8 +2,8 @@ from typing import List
 
 from src.common.interfaces.AvailabilityRepositoryInterface import AvailabilityRepositoryInterface
 from src.core.domain.entities.availability_entity import AvailabilityEntity
-from src.core.domain.exceptions import OperationalException, NotFoundError
-from src.external.database.models.availiability_model import AvailabilityModel
+from src.core.domain.exceptions import NotFoundError
+from src.external.database.sqlalchemy.models.availiability_model import AvailabilityModel
 from src.external.database.sqlalchemy.mappers import AvailabilityMapper
 from src.external.database.sqlalchemy.mappers.AvailabilityMapper import AvailabilityMapper
 from src.external.database.sqlalchemy.session_mixin import use_database_session
