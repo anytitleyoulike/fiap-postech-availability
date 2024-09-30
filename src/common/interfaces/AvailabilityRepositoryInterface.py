@@ -17,5 +17,5 @@ class AvailabilityRepositoryInterface(metaclass=abc.ABCMeta):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def change_available_status(self, date_id: str, is_available: bool):
+    def change_available_status(self, date_id: int, is_available: bool):
         raise NotImplementedError

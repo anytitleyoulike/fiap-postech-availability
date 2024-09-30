@@ -23,3 +23,8 @@ class AvailabilityController:
             doctor_id=doctor_id,
             availability_repository=self.availability_repository
         )
+
+    def change_available_status(self, date_id: int, is_available: bool):
+        return AvailabilityUsecase.change_available_status(date_id=date_id,
+                                                           is_available=is_available,
+                                                           availability_repository=self.availability_repository)

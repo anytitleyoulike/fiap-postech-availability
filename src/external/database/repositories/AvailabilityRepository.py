@@ -11,7 +11,7 @@ from src.external.database.sqlalchemy.session_mixin import use_database_session
 
 class AvailabilityRepository(AvailabilityRepositoryInterface):
 
-    def change_available_status(self, date_id: str, is_available: bool):
+    def change_available_status(self, date_id: int, is_available: bool):
         try:
             with use_database_session() as session:
                 date = session.query(AvailabilityModel).filter_by(id=date_id, doctor_id="12345").first()
