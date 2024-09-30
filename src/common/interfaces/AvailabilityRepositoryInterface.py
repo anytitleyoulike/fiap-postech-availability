@@ -15,3 +15,7 @@ class AvailabilityRepositoryInterface(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def get_available_dates(self, doctor_id: str) -> List[AvailabilityEntity]:
         raise NotImplementedError
+
+    @abc.abstractmethod
+    def change_available_status(self, date_id: str, is_available: bool):
+        raise NotImplementedError

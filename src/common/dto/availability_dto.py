@@ -30,3 +30,17 @@ class AvailableDateResponse(BaseModel):
     start_date: datetime
     end_date: datetime
     is_available: bool
+
+
+class AvailableStatusDTO(BaseModel):
+    is_available: bool
+
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "is_available": "false",
+                },
+            ]
+        }
+    }

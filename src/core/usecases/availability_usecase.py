@@ -30,3 +30,7 @@ class AvailabilityUsecase:
             raise NotFoundError(f"No available dates for {doctor_id}")
 
         return available_dates
+
+    @staticmethod
+    def change_available_status(date_id: str, is_available: bool, availability_repository: AvailabilityRepositoryInterface):
+        return availability_repository.change_available_status(date_id=date_id, is_available=is_available)
